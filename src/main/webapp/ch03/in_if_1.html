@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const id = "easy1004";
+		const pw = "112233";
+		
+		var user_id = prompt("아이디는?", "");	//prompt 입력창, (알림창 위 출력, 입력창 내 출력)
+		var user_pw = prompt("비밀번호는?", "");
+		
+		if (id == user_id) {
+			if (pw == user_pw) {
+				document.write(user_id + "님 반갑습니다.");
+			} else {
+				alert("비밀번호가 일치하지 않습니다.");
+				location.reload(); //브라우져 새로고침
+			}
+		} else {
+			alert("아이디가 일치하지 않습니다");
+			location.reload();
+		}
+	</script>
+</body>
+</html>
