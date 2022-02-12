@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+var info = navigator.userAgent.toLowerCase();	//운영체제 정보를 구함. 구한 정보를 소문자로 치환
+var osImg = null;
+
+if(info.indexOf('window') >= 0) {
+	osImg = "windows.png";
+} else if (info.indexOf('macintosh') >= 0) {
+	osImg = "machintosh.png";
+} else if (info.indexOf('iphone') >= 0) {
+	osImg = "iphone.png";
+} else if (info.indexOf('android') >= 0) {
+	osImg = "android.png";
+}
+
+document.write("<img src=\"images/" + osImg + "\">", "<br>");
+var scr = screen;
+var sc_w = scr.width;
+var sc_h = scr.height;
+
+document.write("모니터 해상도 너비 : " + sc_w + "px", "<br>");
+document.write("모니터 해상도 높이 : " + sc_h + "px", "<br>");
+
+</script>
+</body>
+</html>
